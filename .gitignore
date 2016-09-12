@@ -1,0 +1,6 @@
+tags
+weechat/.weechat/sec.conf
+weechat/.weechat/weechat.log
+weechat/.weechat/logs
+weechat/.weechat/weechat_fifo*
+weechat/.weechat/script/plugins.xml.gz
