@@ -47,6 +47,7 @@ set winname class
 	unbind S
 	unbind C-S
 	unbind C-f
+    unbind F
 	unbind C-r
 	unbind C-underscore
 	unbind C-u
@@ -69,7 +70,7 @@ set winname class
     bind d exec ~/.scripts/ratpoison/launcher.sh libreoffice
 
 	# Info
-	bind F curframe
+	bind C-f curframe
 	bind w windows
     bind a exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_info.sh )"
     bind A exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_cal.sh )"
