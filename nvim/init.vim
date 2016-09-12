@@ -2,7 +2,7 @@
     call plug#begin('~/.vim/plugged')
     
     Plug 'alvan/vim-closetag'
-    Plug 'danielecal/vim-tmux-navigator', { 'branch': 'vim-tmux-wm-screen' }
+    Plug 'nieled/vim-tmux-navigator', { 'branch': 'vim-tmux-wm-screen' }
     Plug 'junegunn/vim-easy-align' 
     Plug 'pangloss/vim-javascript'
     Plug 'mattn/emmet-vim'
