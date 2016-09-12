@@ -72,7 +72,7 @@ set winname class
 	bind F curframe
 	bind w windows
     bind a exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_info.sh )"
-    bind A exec ratpoison -c "echo $( ~/.scritps/ratpoison/echo_cal.sh )"
+    bind A exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_cal.sh )"
 
 	# Tmux vim-like navigator
 	definekey top C-k exec ~/.scripts/ratpoison/rat_tmux-navigator.sh rat up

@@ -4,7 +4,7 @@ source "$(dirname "$0")/volume.sh"
 
 date=$( date "+%l:%M %b %d %a" )
 
-battery_state=$(~/.scripts/echo_battery.sh)
+battery_state=$(~/.scripts/ratpoison/echo_battery.sh)
 sound_state=$(vol_echo_formatted)
 
 
