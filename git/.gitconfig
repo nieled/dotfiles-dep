@@ -1,0 +1,7 @@
+[user]
+	name = Daniel Calle [danielecal]
+	email = edanieleduardo@gmail.com
+[color]
+	ui = true
+[core]
+	editor = nvim
