@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 #{{{ Global Functions
     function command_not_found_handler()
     {
-        cat ~/.artworks/docker
+        cat ~/.artworks/signstop
     }
 
     function list_dir()
