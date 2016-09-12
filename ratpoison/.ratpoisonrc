@@ -1,0 +1,69 @@
+#{{{ General settings
+	startup_message off
+	msgwait 6
+	nextscreen
+	exec /usr/bin/rpws init 2 -k
+#}}}
+
+#{{{ Bindings
+	# Escape key
+	escape Super_L
+
+	# Workspace navigator
+	bind M-1 exec rpws 1
+	bind M-2 exec rpws 2
+	bind M-3 exec rpws 3
+
+	# Unbind keys
+	unbind C-k
+	unbind C-K
+	unbind C-w
+	unbind C-g
+	unbind minus
+	unbind A
+	unbind C-A
+	unbind Return
+	unbind C-Return
+	unbind a
+	unbind C-a
+	unbind b
+	unbind C-b
+	unbind C-c
+	unbind C-exclam
+	unbind i
+	unbind C-i
+	unbind l
+	unbind C-l
+	unbind C-m
+	unbind C-apostrophe
+	unbind space
+	unbind C-space
+	unbind C-v
+	unbind V
+	unbind C-V
+	unbind C-s
+	unbind S
+	unbind C-S
+	unbind C-f
+	unbind C-r
+	unbind C-underscore
+	unbind C-u
+	unbind C-x
+
+	# Windows administration
+	bind o only
+	bind C-n inext
+	bind C-p iprev
+
+	# Frame administration
+	bind R remove
+	bind s vsplit
+	bind v hsplit
+
+	# Info
+	bind F curframe
+	bind w windows
+
+	# Unsorted
+	bind Escape abort
+#}}}
