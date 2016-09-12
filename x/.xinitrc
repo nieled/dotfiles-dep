@@ -2,4 +2,6 @@ xsetroot -solid black &
 xcompmgr -c -f -D 5 &
 xbindkeys &
 
+~/.scripts/ratpoison/app_select.sh terminal
+
 exec /usr/bin/ratpoison
