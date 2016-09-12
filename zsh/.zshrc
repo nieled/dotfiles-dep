@@ -1,85 +1,127 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-  export ZSH=/home/niel/.oh-my-zsh
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="philips"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+export ZSH=/home/niel/.oh-my-zsh
+ZSH_THEME="gnzh"
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# load zgen
+    source "${HOME}/.zgen/zgen.zsh"
+    if ! zgen saved
+    then
+	echo "Creating a zgen save"
+	
+	zgen load zsh-users/zsh-syntax-highlighting
+	zgen load zsh-users/zsh-history-substring-search
+	# zgen load zsh-users/zsh-autosuggestions
+    zgen oh-my-zsh plugins/git
+	zgen save
+    fi
+#}}} 
 
-# export MANPATH="/usr/local/man:$MANPATH"
+#{{{ ZSH Modules
+    autoload -U compinit
+    autoload -Uz promptinit
+    autoload -U colors && colors
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+    compinit
+    promptinit
+#}}}
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#{{{ Options
+    setopt auto_cd
+    setopt no_hup
+    setopt ignore_eof
+    setopt rm_star_wait
+#}}}
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+#{{{ Variables
+    export SCRIPTS="~/.scripts"
+    export EDITOR=nvim
+#}}}
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+#{{{ Colorize commands
+    function ping { command ping "$@" | ccze -A }
+    function traceroute { command traceroute "$@" | ccze -A }
+    function make { command make "$@" | ccze -A }
+    function ./configure { command ./configure "$@" | ccze -A }
+#}}}
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+#{{{ Aliases
+    alias am="alsamixer" alsamixer='alsamixer'
+    alias wifi="sudo wifi-menu -o"
+    alias m="mplayer"
+    alias mail="mutt"
+    alias lsl="command ls -lLh --color | ccze -A"
+    alias lsls="command ls -lLha --color | ccze -A"
+    alias py=/usr/bin/python2.7
+    alias nv="nvim"
+
+    function gd() { git diff --color "$@" | diff-so-fancy | less -RSFXi }
+
+    function man()
+    {
+        command man -P true "$*" &> /dev/null
+        if [[ $? -eq 0 ]];
+        then
+            command nvim -c ":Man $*" -c ":tabonly" -c ":bd 1"
+        else
+            echo
+            echo
+            echo -e "\t No man page \"$*\"    ¯\_(ツ)_/¯"
+            echo
+        fi
+    }
+
+    #{{{ Edit Dotfiles
+        alias ev="$EDITOR ~/.config/nvim/init.vim"
+        alias et="$EDITOR ~/.tmux.conf"
+        alias er="$EDITOR ~/.ratpoisonrc"
+        alias ez="$EDITOR ~/.zshrc"
+        alias ex="$EDITOR ~/.xinitrc"
+        alias '\ev'="$EDITOR ~/.config/nvim/init.vim"
+        alias '\et'="$EDITOR ~/.tmux.conf"
+        alias '\er'="$EDITOR ~/.ratpoisonrc"
+        alias '\ez'="$EDITOR ~/.zshrc"
+        alias '\ex'="$EDITOR ~/.xinitrc"
+    #}}}
+    
+    #{{{ Fancy
+        # if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
+        alias stack="echo; cat ~/.artworks/lambda | lolcat -S 28; echo; stack"
+        alias cabal="echo; cat ~/.artworks/lambda | lolcat -S 28; echo; cabal"
+        alias eje="echo; cat ~/.artworks/floppy; echo; sudo eject /mnt/mem"
+        alias memo="echo; cat ~/.artworks/floppy; echo; \
+            sudo mount /dev/sdb1 /mnt/mem"
+        alias mem="echol cat ~/.artworks/floppy; echo; \
+            sudo mount -o gid=users,fmask=113,dmask=002 /dev/sdb1 /mnt/mem"
+        alias pacman="echo; cat ~/.artworks/pacman; echo; sudo pacman"
+        alias pacmanup="echo; cat ~/.artworks/pacman; echo; sudo pacman -Syyu"
+    #}}}
+#}}}
+
+#{{{ Global Functions
+    function command_not_found_handler()
+    {
+        cat ~/.artworks/docker
+    }
+
+    function list_dir()
+    {
+        echo
+        find "$1/" -maxdepth 1 -not -path '*/\.*' -printf \
+            "[%y]\t%P\n" | tail -n +2 | eval ${SORT_COMMAND} \
+            | sed -r \
+            "s/\[[d]\](.*)/$(printf '\033[0;36m D')\1$(printf '\033[0m')/"\
+            | sed -r \
+            "s/\[[f]\](.*)/$(printf '\033[0;32m F')\1$(printf '\033[0m')/"\
+            | sed -r \
+            "s/\[[l]\](.*)/$(printf '\033[0;34m L')\1$(printf '\033[0m')/"
+        SORT_COMMAND="sort"
+    }
+#}}}
+
+#{{{ First Init
+    # Auto start X11
+    if [[ ! (-e /tmp/.X0-lock) ]]; then
+        startx
+    fi
+#}}}
