@@ -51,6 +51,7 @@ set winname class
 	unbind C-underscore
 	unbind C-u
 	unbind C-x
+    unbind R
 
 	# Windows administration
 	bind o only
@@ -58,13 +59,14 @@ set winname class
 	bind C-p iprev
 
 	# Frame administration
-	bind R remove
 	bind s vsplit
 	bind v hsplit
+    bind Q remove
 	
 	# Launchers - switching
 	bind e exec ~/.scripts/ratpoison/launcher.sh firefox
 	bind c exec ~/.scripts/ratpoison/launcher.sh terminal
+    bind d exec ~/.scripts/ratpoison/launcher.sh libreoffice
 
 	# Info
 	bind F curframe
