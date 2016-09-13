@@ -58,6 +58,8 @@ set winname class
 	bind o only
 	bind C-n inext
 	bind C-p iprev
+    bind M-w exec ~/.scripts/screen_dual.sh
+    bind M-e exec ~/.scripts/screen_local.sh
 
 	# Frame administration
 	bind s vsplit
