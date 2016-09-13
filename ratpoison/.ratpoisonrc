@@ -63,6 +63,7 @@ set winname class
 	bind s vsplit
 	bind v hsplit
     bind Q remove
+    bind S exec ~/.scripts/ratpoison/dump_or_restore.sh
 	
 	# Launchers - switching
 	bind e exec ~/.scripts/ratpoison/launcher.sh firefox
