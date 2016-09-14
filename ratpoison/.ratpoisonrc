@@ -77,6 +77,7 @@ set winname class
 	bind w windows
     bind a exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_info.sh )"
     bind A exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_cal.sh )"
+    bind I exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_net_info.sh )"
 
 	# Tmux vim-like navigator
 	definekey top C-k exec ~/.scripts/ratpoison/rat_tmux-navigator.sh rat up
