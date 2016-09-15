@@ -4,7 +4,7 @@
     Plug 'alvan/vim-closetag'
     Plug 'nieled/vim-tmux-navigator', { 'branch': 'vim-tmux-wm-screen' }
     Plug 'junegunn/vim-easy-align' 
-    Plug 'pangloss/vim-javascript'
+    "Plug 'pangloss/vim-javascript'
     Plug 'mattn/emmet-vim'
 
     call plug#end()
@@ -18,12 +18,12 @@
             nmap ga <Plug>(EasyAlign)
             xmap ga <Plug>(EasyAlign)
 
-            let g:easy_align_delimiters = {
-                \ '/': {
-                \     'pattern':         '//\+\|/\*\|\*/',
-                \     'delimiter_align': 'l',
-                \     'ignore_groups':   ['!Comment'] }
-                \ }
+            "let g:easy_align_delimiters = {
+            "    \ '/': {
+            "    \     'pattern':         '//\+\|/\*\|\*/',
+            "    \     'delimiter_align': 'l',
+            "    \     'ignore_groups':   ['!Comment'] }
+            "    \ }
         "}}}
 
         "{{{ Closetag
@@ -32,7 +32,7 @@
 
         "{{{ Emmet
             let g:user_emmet_install_global = 0
-            autocmd FileType html,css,php,blade EmmetInstall
+            autocmd FileType html,css,php EmmetInstall
             let g:user_emmet_leader_key='<C-j>'
         "}}}
     "}}}
