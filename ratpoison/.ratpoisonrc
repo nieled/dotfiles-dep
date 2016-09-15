@@ -61,6 +61,9 @@ set winname class
     bind M-w exec ~/.scripts/screen_dual.sh
     bind M-e exec ~/.scripts/screen_local.sh
 
+    #start screen in detached mode (mostly for music)
+	exec screen -d -m
+
 	# Frame administration
 	bind s vsplit
 	bind v hsplit
@@ -84,7 +87,7 @@ set winname class
 	bind w windows
     bind a exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_info.sh )"
     bind A exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_cal.sh )"
-    bind I exec ratpoison -c "echo $( ~/.scripts/ratpoison/echo_net_info.sh )"
+    bind I exec ratpoison -c "echo $( ~/.scripts/network/echo_net_info.sh )"
 
 	# Tmux vim-like navigator
 	definekey top C-k exec ~/.scripts/ratpoison/rat_tmux-navigator.sh rat up
@@ -92,6 +95,9 @@ set winname class
 	definekey top C-l exec ~/.scripts/ratpoison/rat_tmux-navigator.sh rat right
 	definekey top C-h exec ~/.scripts/ratpoison/rat_tmux-navigator.sh rat left
 
-	# Unsorted
+    # Screen shots
+    bind at exec scrot -u -z -q 100 -e 'mv $f ~/.shots/'
+	
+    # Unsorted
 	bind Escape abort
 #}}}
