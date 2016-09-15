@@ -66,7 +66,14 @@ set winname class
 	bind v hsplit
     bind Q remove
     bind S exec ~/.scripts/ratpoison/dump_or_restore.sh
+    # Blank window
+    bind b select -
 	
+    # Cmus config
+    definekey top XF86AudioPlay exec cmus-remote -u
+    definekey top XF86AudioPrev exec cmus-remote -r
+    definekey top XF86AudioNext exec cmus-remote -n
+
 	# Launchers - switching
 	bind e exec ~/.scripts/ratpoison/launcher.sh firefox
 	bind c exec ~/.scripts/ratpoison/launcher.sh terminal
