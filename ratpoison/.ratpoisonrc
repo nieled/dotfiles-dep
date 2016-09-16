@@ -61,9 +61,6 @@ set winname class
     bind M-w exec ~/.scripts/screen_dual.sh
     bind M-e exec ~/.scripts/screen_local.sh
 
-    #start screen in detached mode (mostly for music)
-	exec screen -d -m
-
 	# Frame administration
 	bind s vsplit
 	bind v hsplit
