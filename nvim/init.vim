@@ -4,8 +4,15 @@
     Plug 'alvan/vim-closetag'
     Plug 'nieled/vim-tmux-navigator', { 'branch': 'vim-tmux-wm-screen' }
     Plug 'junegunn/vim-easy-align' 
-    "Plug 'pangloss/vim-javascript'
     Plug 'mattn/emmet-vim'
+    Plug 'SirVer/ultisnips'
+    Plug 'othree/html5.vim'
+    Plug 'terryma/vim-multiple-cursors'
+    Plug 'tpope/vim-commentary'
+    Plug 'othree/javascript-libraries-syntax.vim'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'vim-latex/vim-latex'
+    Plug 'aperezdc/vim-template'
 
     call plug#end()
     "{{{ Plugins configuration
@@ -34,6 +41,19 @@
             let g:user_emmet_install_global = 0
             autocmd FileType html,css,php EmmetInstall
             let g:user_emmet_leader_key='<C-j>'
+        "}}}
+
+        "{{{ UltiSnips
+            let g:UltiSnipsEditSplit="horizontal"
+        "}}}
+        
+        "{{{ Multiple-cursors
+            let g:multi_cursor_exit_from_visual_mode=0
+            let g:multi_cursor_exit_from_insert_mode=0
+        "}}}
+
+        "{{{ javascript-libraries-syntax
+            let g:used_javascript_libs = 'jquery,angularjs,angularuirouter'
         "}}}
     "}}}
 "}}}
@@ -117,5 +137,18 @@
         nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
         nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
         nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+    "}}}
+
+    "{{{ X Clipboard yanking/pasting
+        nnoremap <C-c>p o<esc>"+p
+        nnoremap <C-c>P O<esc>"+p
+        nnoremap <C-c>y "+y
+        nnoremap <C-c>Y "+Y
+        vnoremap <C-c>y "+y
+        inoremap <C-r>c <C-r>+
+        " Ctrl variations
+        nnoremap <C-c><C-p> o<esc>"+p
+        nnoremap <C-c><C-y> "+y
+        vnoremap <C-c><C-y> "+y
     "}}}
 "}}}
