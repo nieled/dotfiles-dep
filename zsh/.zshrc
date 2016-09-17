@@ -36,6 +36,12 @@ source $ZSH/oh-my-zsh.sh
 #{{{ Variables
     export SCRIPTS="~/.scripts"
     export EDITOR=nvim
+
+    # Android
+    export ANDROID_HOME=/opt/android-sdk
+    export ANDROID_TOOLS="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+     #Java
+    export _JAVA_AWT_WM_NONREPARENTING=1 # Solve blank window problem
 #}}}
 
 #{{{ Colorize commands
@@ -95,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
             sudo mount -o gid=users,fmask=113,dmask=002 /dev/sdb1 /mnt/mem"
         alias pacman="echo; cat ~/.artworks/pacman; echo; sudo pacman"
         alias pacmanup="echo; cat ~/.artworks/pacman; echo; sudo pacman -Syyu"
+        alias clip="xclip -selection clipboard -i"
     #}}}
 #}}}
 
@@ -119,9 +126,44 @@ source $ZSH/oh-my-zsh.sh
     }
 #}}}
 
+# Allow Copy/Paste with the system clipboard
+    # behave as expected with vim commands ( y/p/d/c/s )
+    [[ -n $DISPLAY ]] && (( $+commands[xclip] )) && {
+
+    function cut_buffer()
+    {
+        zle .$WIDGET
+        echo $CUTBUFFER | xclip -selection clipboard
+    }
+
+    zle -N vi-yank cut_buffer
+    zle -N vi-yank-eol cut_buffer
+
+    function put_buffer()
+    {
+        zle copy-region-as-kill "$(xclip -selection clipboard -o |
+        sed "s/^/ /")"
+        zle .$WIDGET
+    }
+
+    function put_quoted_buffer()
+    {
+        zle copy-region-as-kill "$(xclip -selection clipboard -o |
+        sed "s/^/ '/;s/$/'/")"
+        zle .$WIDGET
+    }
+
+    zle -N vi-put-after put_buffer
+    zle -N vi-put-before put_quoted_buffer
+    }
+#}}}
+
 #{{{ First Init
     # Auto start X11
     if [[ ! (-e /tmp/.X0-lock) ]]; then
         startx
     fi
 #}}}
+
+export NVM_DIR="/home/niel/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
