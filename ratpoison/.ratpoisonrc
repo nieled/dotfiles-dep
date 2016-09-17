@@ -3,6 +3,7 @@
 	msgwait 6
 	nextscreen
 	exec /usr/bin/rpws init 2 -k
+    exec wmname LG3D
 #}}}
 
 set winname class
@@ -78,6 +79,7 @@ set winname class
 	bind e exec ~/.scripts/ratpoison/launcher.sh firefox
 	bind c exec ~/.scripts/ratpoison/launcher.sh terminal
     bind d exec ~/.scripts/ratpoison/launcher.sh libreoffice
+    bind E exec /opt/android-studio/bin/studio.sh
 
 	# Info
 	bind C-f curframe
