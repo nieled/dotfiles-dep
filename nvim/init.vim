@@ -13,6 +13,7 @@
     Plug 'sheerun/vim-polyglot'
     Plug 'vim-latex/vim-latex'
     Plug 'aperezdc/vim-template'
+    Plug 'leafgarland/typescript-vim'
 
     call plug#end()
     "{{{ Plugins configuration
