@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 #{{{ Aliases
     alias am="alsamixer" alsamixer='alsamixer'
     alias wifi="sudo wifi-menu -o"
-    alias m="mplayer"
+    alias m="cmus"
     alias mail="mutt"
     alias lsl="command ls -lLh --color | ccze -A"
     alias lsls="command ls -lLha --color | ccze -A"
@@ -95,10 +95,8 @@ source $ZSH/oh-my-zsh.sh
         alias stack="echo; cat ~/.artworks/lambda | lolcat -S 28; echo; stack"
         alias cabal="echo; cat ~/.artworks/lambda | lolcat -S 28; echo; cabal"
         alias eje="echo; cat ~/.artworks/floppy; echo; sudo eject /mnt/mem"
-        alias memo="echo; cat ~/.artworks/floppy; echo; \
+        alias mem="echo; cat ~/.artworks/floppy; echo; \
             sudo mount /dev/sdb1 /mnt/mem"
-        alias mem="echol cat ~/.artworks/floppy; echo; \
-            sudo mount -o gid=users,fmask=113,dmask=002 /dev/sdb1 /mnt/mem"
         alias pacman="echo; cat ~/.artworks/pacman; echo; sudo pacman"
         alias pacmanup="echo; cat ~/.artworks/pacman; echo; sudo pacman -Syyu"
         alias clip="xclip -selection clipboard -i"
