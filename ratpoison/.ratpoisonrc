@@ -3,8 +3,8 @@
 	msgwait 6
 	nextscreen
 	exec /usr/bin/rpws init 2 -k
-    exec wmname LG3D
-#}}}
+    exec nitrogen --restore
+#}}
 
 set winname class
 
