@@ -25,6 +25,17 @@ function launch_firefox
     fi
 }
 
+function launch_chromium
+{
+    if is_running 'chromium';
+    then
+        ratpoison -c "select chromium"
+    else
+        ratpoison -c "echo Starting Chromium"
+        chromium&
+    fi
+}
+
 
 function launch_terminal
 {
@@ -69,5 +80,8 @@ case "$1" in
         ;;
     'weechat')
         launch_weechat
+        ;;
+    'chromium')
+        launch_chromium
         ;;
 esac

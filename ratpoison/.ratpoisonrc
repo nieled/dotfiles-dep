@@ -76,7 +76,7 @@ set winname class
     definekey top XF86AudioNext exec cmus-remote -n
 
 	# Launchers - switching
-	bind e exec ~/.scripts/ratpoison/launcher.sh firefox
+	bind e exec ~/.scripts/ratpoison/launcher.sh chromium
 	bind c exec ~/.scripts/ratpoison/launcher.sh terminal
     bind d exec ~/.scripts/ratpoison/launcher.sh libreoffice
     bind E exec /opt/android-studio/bin/studio.sh
