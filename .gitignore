@@ -10,3 +10,5 @@ cmus/.config/cmus/command-history
 cmus/.config/cmus/playlist.pl
 cmus/.config/cmus/search-history
 cmus/.config/cmus/lib.pl
+ranger/.config/ranger/bookmarks
+ranger/.config/ranger/history
