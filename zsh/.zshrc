@@ -1,6 +1,6 @@
 export ZSH=/home/niel/.oh-my-zsh
 ZSH_THEME="gnzh"
-plugins=(git)
+plugins=(git pip)
 source $ZSH/oh-my-zsh.sh
 
 # load zgen
@@ -58,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
     alias mail="mutt"
     alias lsl="command ls -lLh --color | ccze -A"
     alias lsls="command ls -lLha --color | ccze -A"
-    alias py=/usr/bin/python2.7
+    alias python=/usr/bin/python2.7
     alias nv="nvim"
 
     function gd() { git diff --color "$@" | diff-so-fancy | less -RSFXi }
