@@ -1,5 +1,5 @@
 export ZSH=/home/niel/.oh-my-zsh
-ZSH_THEME="gnzh"
+ZSH_THEME="agnoster"
 plugins=(git pip)
 source $ZSH/oh-my-zsh.sh
 
