@@ -83,11 +83,13 @@ source $ZSH/oh-my-zsh.sh
         alias er="$EDITOR ~/.ratpoisonrc"
         alias ez="$EDITOR ~/.zshrc"
         alias ex="$EDITOR ~/.xinitrc"
+        alias ei="$EDITOR ~/.config/i3/config"
         alias '\ev'="$EDITOR ~/.config/nvim/init.vim"
         alias '\et'="$EDITOR ~/.tmux.conf"
         alias '\er'="$EDITOR ~/.ratpoisonrc"
         alias '\ez'="$EDITOR ~/.zshrc"
         alias '\ex'="$EDITOR ~/.xinitrc"
+        alias '\ei'="$EDITOR ~/.config/i3/config"
     #}}}
     
     #{{{ Fancy
