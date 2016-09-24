@@ -5,4 +5,6 @@ xbindkeys &
 # ~/.scripts/ratpoison/app_select.sh terminal
 
 # exec /usr/bin/ratpoison
-exec i3 -V >> ~/i3log-$(date +'%F-%k-%M-%S') 2>&1
+# exec i3 -V >> ~/i3log-$(date +'%F-%k-%M-%S') 2>&1
+
+exec i3
