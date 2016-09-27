@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 #{{{ Aliases
     alias am="alsamixer" alsamixer='alsamixer'
     alias wifi="sudo wifi-menu -o"
-    alias m="cmus"
+    alias m="ncmpcpp"
     alias mail="mutt"
     alias lsl="command ls -lLh --color | ccze -A"
     alias lsls="command ls -lLha --color | ccze -A"
