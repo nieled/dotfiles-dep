@@ -14,6 +14,7 @@
     Plug 'vim-latex/vim-latex'
     Plug 'aperezdc/vim-template'
     Plug 'leafgarland/typescript-vim'
+    Plug 'PotatoesMaster/i3-vim-syntax'
 
     call plug#end()
     "{{{ Plugins configuration
