@@ -153,5 +153,18 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         position top
-        status_command i3status
+        # status_command i3status
+        status_command $HOME/.config/i3/wrapper
+        # mode hide
+        # hidden_state hide
+        Modifier Mod1
+        
+        colors {
+                statusline #AAAAAA
+                background $gray2
+                focused_workspace $gray2 $gray2 #FFFFFF
+                inactive_workspace $gray1 $gray1 #AAAAAA
+        }
 }
+
+# vim:filetype=i3

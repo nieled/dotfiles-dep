@@ -1,0 +1,71 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+
+# Update interval in seconds
+update_interval 2.0
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+short_units yes
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up, link or address, to check for the interface
+# being solely up, being up and having link or being up, having link
+# and an assigned IP address. 
+if_up_strictness address
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+# use_spacer should have an argument of left, right, or none
+use_spacer left
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale yes
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# Stuff after 'TEXT' will be formatted on screen
+TEXT
+
+# JSON for i3bar
+ [
+  #Finds out if cmus is running. If it is, it provides 1) the current artist and 2) the current track. If cmus isn't running it outputs "Not Running"
+  {"full_text": "♫ [ ${exec $HOME/.scripts/cmus_notify.sh -Q artist } - ${exec $HOME/.scripts/cmus_notify.sh -Q song } ] ", "color":"\#A0B0C0"},
+
+  #Finds current volume. May need modified depending on your setup
+  {"full_text": "V ${exec amixer get Master | grep -o "\[.*%\]"} ", "color":"\#268BD2"},
+
+  #Shows current user
+  {"full_text": "[${exec whoami} @ ${exec hostname}] ", "color":"\#6F3BFF"},
+  
+  #Shows hostname (heart for lack of better symbol)
+  #{"full_text": " H [${exec hostname}] ", "color":"\#6F3BFF"},
+  
+  #Shows uploadspeed
+  {"full_text": " ▲ ${upspeed wlp0s20u1} ▼ ${downspeed wlp0s20u1} ", "color":"\#44cc44"},
+  #Shows downloadspeed
+  #  {"full_text": " ▼ [${downspeed wlan0}] ", "color":"\#44cc44"},
+
+  #{ "full_text" : "RAM ${memperc}%" , "color" :
+  #  ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
+  #Shows current memory usage with a bar
+  {"full_text": " || [$mem] ", "color":"\#B58900"},
+  #Shows current CPU usage with a bar
+  {"full_text": " ■ [$cpu%] ", "color":"\#00A9B5"},
+
+  #Battery
+  {"full_text": " B [${battery_short} ${battery_time}] ","color":"\#A0B0C0"},
+
+  #Shows upime
+  #  {"full_text": " uptime [${uptime_short}] ","color": "\#F0E0D0"},
+  {"full_text": " [${time %a %d %b} ${time %H:%M}] ","color": "\#2fdc57"}
+
+],
+
