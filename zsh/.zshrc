@@ -60,7 +60,14 @@ source $ZSH/oh-my-zsh.sh
     alias lsls="command ls -lLha --color | ccze -A"
     alias python=/usr/bin/python2.7
     alias nv="nvim"
+    alias o="xdg-open"
 
+    alias ga="git add"
+    alias gb="git branch"
+    alias gc="git commit"
+    alias gco="git checkout"
+    alias gl="git log --format=format:'%C(auto)%h %C(green)%aN%Creset %Cblue%cr%Creset %s'"
+    alias gs="git status -sb"
     function gd() { git diff --color "$@" | diff-so-fancy | less -RSFXi }
 
     function man()
@@ -102,6 +109,8 @@ source $ZSH/oh-my-zsh.sh
         alias pacman="echo; cat ~/.artworks/pacman; echo; sudo pacman"
         alias pacmanup="echo; cat ~/.artworks/pacman; echo; sudo pacman -Syyu"
         alias clip="xclip -selection clipboard -i"
+        alias gclone="$SCRIPTS/git.sh clone"
+        alias gpush="$SCRIPTS/git.sh push"
     #}}}
 #}}}
 
