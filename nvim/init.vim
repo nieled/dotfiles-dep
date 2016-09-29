@@ -15,6 +15,7 @@
     Plug 'aperezdc/vim-template'
     Plug 'leafgarland/typescript-vim'
     Plug 'PotatoesMaster/i3-vim-syntax'
+    Plug 'jiangmiao/auto-pairs'
 
     call plug#end()
     "{{{ Plugins configuration
@@ -83,7 +84,7 @@
     set tabstop=4           " Render TAB's using this many spaces
     set shiftwidth=4        " Indentation amount for < and > commands
     set softtabstop=4
-    set textwidth=80
+    "set textwidth=80
     set nojoinspaces        " Prevents inserting two spaces after punctuation on a join (J)
     
     set hlsearch            " Highlight search results.
@@ -128,7 +129,6 @@
         augroup ft_js
             au!
             au FileType javascript setlocal foldmethod=marker
-            au FileType javascript setlocal foldmarket={,}
         augroup END
     "}}}
 "}}}
