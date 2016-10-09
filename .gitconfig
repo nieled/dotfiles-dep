@@ -1,0 +1,7 @@
+[user]
+	mail = edanieleduardo@gmail.com
+	name = Eduardo Calle
+[color]
+	ui = true
+[core]
+    editor = nvim
