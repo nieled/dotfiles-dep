@@ -5,7 +5,7 @@ source $ZSH/oh-my-zsh.sh
 # source ~/.functions
 
 #{{{ Variables
-    export MORDOR=
+    export MORDOR=190.152.20.153
     export SCRIPTS="~/.scripts"
     export EDITOR=nvim
 
@@ -32,6 +32,7 @@ source $ZSH/oh-my-zsh.sh
     alias nv="nvim"
     alias fe="ranger"
     alias o="xdg-open"
+    alias eclipse="~/eclipse/jee-neon/eclipse/eclipse"
 
     alias ga="git add"
     alias gb="git branch"
