@@ -39,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
     alias gc="git commit"
     alias gco="git checkout"
     alias gl="git log --format=format:'%C(auto)%h %C(green)%aN%Creset %Cblue%cr%Creset %s'"
-    alias gs="git status -sb"
+    alias gs="git status"
     function gd() { git diff --color "$@" | diff-so-fancy | less -RSFXi }
 
     function man()
