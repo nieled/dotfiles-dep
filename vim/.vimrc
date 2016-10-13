@@ -4,7 +4,7 @@
     Plug 'alvan/vim-closetag'
     Plug 'junegunn/vim-easy-align' 
     Plug 'mattn/emmet-vim'
-    "Plug 'SirVer/ultisnips'
+    Plug 'SirVer/ultisnips'
     Plug 'othree/html5.vim'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'tpope/vim-commentary'
@@ -34,7 +34,7 @@
         "}}}
 
         "{{{ UltiSnips
-            "let g:UltiSnipsEditSplit="horizontal"
+            let g:UltiSnipsEditSplit="horizontal"
         "}}}
         
         "{{{ Multiple-cursors
