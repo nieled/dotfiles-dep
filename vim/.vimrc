@@ -139,3 +139,38 @@
         vnoremap <C-c><C-y> "+y
     "}}}
 "}}}
+
+"{{{ Functions
+    function! Format() "{{{
+        " * Removes trailing white spaces
+        " * Removes blank lines at the end of the file
+        " * Replaces tabs with spaces
+        " * Re-Indent
+        "
+        " * If: C, CPP, PHP or Java code: format using 'astyle'
+        " * If: Rust code: format using 'rustfmt'
+        "
+        " * Clear 'formatprg' so `gq` can be used with the default
+        "   behavior
+        silent! execute 'norm! mz'
+
+        if &ft ==? 'c' || &ft ==? 'cpp' || &ft ==? 'php'
+            setlocal formatprg=astyle\ --mode=c
+            silent! execute 'norm! gggqG'
+        elseif &ft ==? 'java'
+            setlocal formatprg=astyle\ --mode=java
+            silent! execute 'norm! gggqG'
+        elseif &ft ==? 'rust'
+            setlocal formatprg=rustfmt
+            silent! execute 'norm! gggqG'
+        endif
+
+        silent! call RemoveTrailingSpaces()
+        silent! execute 'retab'
+        silent! execute 'gg=G'
+        silent! execute 'norm! `z'
+        setlocal formatprg=
+    endfunction
+    "}}}
+
+"}}}
