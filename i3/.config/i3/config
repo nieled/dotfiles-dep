@@ -223,16 +223,16 @@
     for_window [class="Nitrogen"] floating enable border normal
     for_window [title="alsamixer"] floating enable border pixel 2
     for_window [title="File Transfer*"] floating enable
-    #for_window [class="GParted"] floating enable border normal
+    for_window [class="GParted"] floating enable border normal
     for_window [class="Pavucontrol"] floating enable
-    #for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
+    for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
     #for_window [class="Skype"] floating enable border normal
-	#for_window [class="Thus"] floating enable border normal<Paste>
-	#for_window [class="(?i)virtualbox"] floating enable border normal
+	#for_window [class="Thus"] floating enable border normal
+	for_window [class="(?i)virtualbox"] floating enable border normal
     #for_window [class="(?i)Wicd"] floating enable border normal
 	#for_window [class="Gpicview"] floating enable border normal
     for_window [class="Arandr"] floating enable border normal
-	#for_window [class="mpv"] floating enable border normal
+	for_window [class="mpv"] floating enable border normal
 #}}}
 
 
