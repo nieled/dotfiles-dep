@@ -32,7 +32,6 @@ source $ZSH/oh-my-zsh.sh
     alias nv="nvim"
     alias fe="ranger"
     alias o="xdg-open"
-    alias eclipse="~/eclipse/jee-neon/eclipse/eclipse"
 
     alias ga="git add"
     alias gb="git branch"
