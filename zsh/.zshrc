@@ -78,11 +78,17 @@ source $ZSH/oh-my-zsh.sh
     #}}}
 
     #{{{ Sufix
+        #gfx
         alias -s pdf=zathura
         alias -s jpg=sxiv
         alias -s jpeg=sxiv
         alias -s gif=sxiv
         alias -s png=sxiv
+        #archives
+        alias -s zip=zipinfo
+        alias -s rar=als
+        alias -s gz=als
+        #vim
         alias -s c=vim
         alias -s cpp=vim
         alias -s h=vim
