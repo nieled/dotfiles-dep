@@ -76,6 +76,23 @@ source $ZSH/oh-my-zsh.sh
         alias gclone="$SCRIPTS/git.sh clone"
         alias gpush="$SCRIPTS/git.sh push"
     #}}}
+
+    #{{{ Sufix
+        alias -s pdf=zathura
+        alias -s jpg=sxiv
+        alias -s jpeg=sxiv
+        alias -s gif=sxiv
+        alias -s png=sxiv
+        alias -s c=vim
+        alias -s cpp=vim
+        alias -s h=vim
+        alias -s hpp=vim
+        alias -s java=vim
+        alias -s php=vim
+        alias -s html=vim
+        alias -s css=vim
+        alias -s js=vim
+    #}}}
 #}}}
 
 export LANG=en_US.UTF-8
