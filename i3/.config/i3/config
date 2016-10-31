@@ -68,12 +68,12 @@
     #bindsym $mod+y exec /usr/bin/mpv-nodialog.sh
     bindsym $mod+u exec /usr/local/bin/open-elinks.sh
     bindsym $mod+g exec urxvt -e elinks https://classic.startpage.com
+    bindsym $mod+Shift+g exec urxvt -e elinks https://www.google.com/?hl=en
     #bindsym $mod+Shift+u exec /usr/bin/getpic.sh
     bindsym $mod+Ctrl+k exec --no-startup-id compton -b
     bindsym $mod+t exec firejail --seccomp transmission-gtk
     bindsym $mod+Shift+v exec virtualbox
     bindsym $mod+o exec urxvt -e 'youtube-viewer'
-    #bindsym $mod+Shift+g exec termite -e 'elinks https://www.google.com/?hl=en'
     #bindsym $mod+i exec termite -e 'wicd-curses'
     bindsym $mod+Shift+w exec wireshark
     bindsym $mod+Shift+s exec "xbacklight -set 1";
