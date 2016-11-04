@@ -57,7 +57,8 @@
     # Terminal (mod+Enter)
     #bindsym $mod+Return exec i3-sensible-terminal
     bindcode $mod+36 exec urxvt
-    
+    bindsym $mod+slash exec urxvt -e zsh -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"
+
     bindsym $mod+p exec pavucontrol
     bindsym $mod+c exec firejail --seccomp firefox
     bindsym $mod+n exec nitrogen 
