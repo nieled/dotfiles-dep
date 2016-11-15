@@ -51,6 +51,8 @@
 
 "{{{{ Options
     "{{{ General Options
+    set path+=**            " Display tab-completion for all file-related tasks
+    set wildmenu            " Display all matching files when we tab complete
     set autoindent
     set smartindent
     set wrap
