@@ -9,7 +9,8 @@ source $ZSH/oh-my-zsh.sh
     export SCRIPTS="~/.scripts"
     export EDITOR=nvim
 
-    export ANDROID_HOME=/opt/android-studio
+    # export ANDROID_HOME=/opt/android-studio
+    export ANDROID_HOME=~/Android/Sdk/
     export PATH=${PATH}:~/Android/Sdk/platform-tools:~/Android/Sdk/tools
 
     export _JAVA_AWT_WM_NONREPARENTING=1
