@@ -91,15 +91,15 @@ source $ZSH/oh-my-zsh.sh
         alias -s rar=als
         alias -s gz=als
         #vim
-        alias -s c=vim
-        alias -s cpp=vim
-        alias -s h=vim
-        alias -s hpp=vim
-        alias -s java=vim
-        alias -s php=vim
-        alias -s html=vim
-        alias -s css=vim
-        alias -s js=vim
+        alias -s c=nvim
+        alias -s cpp=nvim
+        alias -s h=nvim
+        alias -s hpp=nvim
+        alias -s java=nvim
+        alias -s php=nvim
+        alias -s html=nvim
+        alias -s css=nvim
+        alias -s js=nvim
     #}}}
 #}}}
 
