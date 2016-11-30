@@ -61,7 +61,8 @@
 
     bindsym $mod+p exec pavucontrol
     bindsym $mod+c exec firejail --seccomp firefox
-    bindsym $mod+n exec nitrogen 
+    bindsym $mod+Shift+c exec chromium
+    bindsym $mod+n exec nitrogen
     bindsym $mod+F1 exec pcmanfm
     bindsym $mod+F2 exec urxvt -e ranger
     bindsym $mod+m exec urxvt -e 'ncmpcpp'
