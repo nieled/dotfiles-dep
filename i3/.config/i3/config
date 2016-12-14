@@ -19,20 +19,20 @@
     set $green              #B5BD56
 
     # class                 border  backgr. text    indicator child_border
-    client.focused          #00C0C0 #285577 #ffffff #2e9ef4   #00C0C0
-    client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-    client.unfocused        #333333 #222222 #888888 #292d2e   #403C38 
-    client.urgent           #2f343a #900000 #ffffff #900000   #900000
-    client.placeholder #000000 #0c0c0c #ffffff #000000 #0c0c0c
+    #client.focused          #00C0C0 #285577 #ffffff #2e9ef4   #00C0C0
+    #client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+    #client.unfocused        #333333 #222222 #888888 #292d2e   #403C38 
+    #client.urgent           #2f343a #900000 #ffffff #900000   #900000
+    #client.placeholder #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
     # Default colors
     # class                 border  backgr. text    indicator child_border
-    #client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-    #client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-    #client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-    #client.urgent           #2f343a #900000 #ffffff #900000   #900000
-    #client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-    #client.background #ffffff
+    client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+    client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+    client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+    client.urgent           #2f343a #900000 #ffffff #900000   #900000
+    client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+    client.background #ffffff
 #}}}
 
 #{{{ Font
@@ -231,6 +231,7 @@
     #for_window [class="Skype"] floating enable border normal
 	#for_window [class="Thus"] floating enable border normal
 	for_window [class="(?i)virtualbox"] floating enable border normal
+	for_window [class="(*)ox"] floating enable border normal
     #for_window [class="(?i)Wicd"] floating enable border normal
 	#for_window [class="Gpicview"] floating enable border normal
     for_window [class="Arandr"] floating enable border normal

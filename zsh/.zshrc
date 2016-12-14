@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
         alias -s php=nvim
         alias -s html=nvim
         alias -s css=nvim
-        alias -s js=nvim
+        #alias -s js=nvim
     #}}}
 #}}}
 
