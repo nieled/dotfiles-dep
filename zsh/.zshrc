@@ -5,7 +5,7 @@ source $ZSH/oh-my-zsh.sh
 # source ~/.functions
 
 #{{{ Variables
-    export MORDOR=190.152.20.153
+    # export MORDOR=190.152.20.153
     export SCRIPTS="~/.scripts"
     export EDITOR=nvim
 
@@ -71,8 +71,6 @@ source $ZSH/oh-my-zsh.sh
     #}}}
 
     #{{{ Fancy
-        alias mem="sudo mount /dev/sdb1 /mnt/mem"
-        alias eje="sudo eject /mnt/mem"
         alias pacman="sudo pacman"
         alias pacmanup="sudo pacman -Syyu"
         alias gclone="$SCRIPTS/git.sh clone"
