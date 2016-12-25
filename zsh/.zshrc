@@ -104,13 +104,9 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
-function 4chan(){
-    curl -s $1 | grep -o -i '<a href="//i.4cdn.org/[^>]*>' | sed -r 's%.*"//([^"]*)".*%\1%' | xargs wget
-}
-
-function 4chandl(){
-    curl -s $1 | grep -o -i '<a href="//i.4cdn.org/[^>]*>' | sed -r 's%.*"//([^"]*)".*%\1%' | xargs aria2c
-}
+#function 4chan(){
+#    curl -s $1 | grep -o -i '<a href="//i.4cdn.org/[^>]*>' | sed -r 's%.*"//([^"]*)".*%\1%' | xargs wget
+#}
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
