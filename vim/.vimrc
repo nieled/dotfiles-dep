@@ -10,10 +10,8 @@
     Plug 'tpope/vim-commentary'
     Plug 'othree/javascript-libraries-syntax.vim'
     Plug 'sheerun/vim-polyglot'
-    "Plug 'vim-latex/vim-latex'
     Plug 'lervag/vimtex'
     Plug 'aperezdc/vim-template'
-    Plug 'leafgarland/typescript-vim'
     Plug 'PotatoesMaster/i3-vim-syntax'
     Plug 'jiangmiao/auto-pairs'
 
